@@ -1,0 +1,375 @@
+/* =========================
+Base Element Styles
+========================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	line-height: 1.6;
+	color: #434e4e;
+	text-align: center;
+}
+
+p,
+h1,
+h2,
+h3,
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+h2,
+nav li {
+	text-transform: uppercase;
+}
+
+/* =========================
+Base Layout Styles
+========================= */
+
+/* ---- Non-Portfolio Styles ---- */
+.main-header,
+.intro,
+#skills,
+#contact,
+.main-footer {
+	color: white;
+	background-color: #16a085;
+	padding-left: 1.2em;
+	padding-right: 1.2em;
+	padding-bottom: 1.2em;
+}
+
+/* ---- Header ---- */
+
+.main-header,
+.main-nav ul {
+	display: flex;
+	flex-direction: column;
+}
+
+#name {
+	padding: .8em;
+}
+
+.main-nav a {
+	display: block;
+	padding: .5em;
+	background-color: white;
+	color: #16a085;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: .4em;
+}
+
+.main-nav ul {
+	margin-bottom: 1em;
+	}
+
+.main-nav li a:hover {
+	color: #AC5043;
+}
+/* ---- Intro Banner ---- */
+
+.intro img {
+	width: 60%;
+	margin-bottom: 1.2em;
+	box-shadow: 4px 4px 4px rgba(0,0,0,.25);
+	border-radius: 4px;
+}
+
+.intro p {
+	margin-bottom: 1em;
+}
+
+/* ---- Skills Section ---- */
+
+#skills {
+	color: white;
+	background-color: #088DD3;
+}
+
+#skills p {
+	margin-bottom: 1em;
+}
+
+#skills ul {
+	list-style: square inside;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 2em;
+}
+
+#skills li {
+	padding-bottom: .4em;
+}
+
+#skills h2 {
+	padding-top: 1.6em;
+	padding-bottom: 1.6em;
+}
+
+/* ---- Portfolio Container --- */
+
+#portfolio {
+	background-color: #f6f6f6;
+	margin-bottom: 0;
+	padding-left: 1.2em;
+	padding-right: 1.2em;
+	padding-top: 1.2em;
+}
+
+#portfolio h2 {
+	padding-top: 1em;
+	padding-bottom: 1.6em;
+}
+
+/* ---- Portfolio Items ---- */
+
+.portfolio-item img {
+	width: 100%;
+	margin-bottom: 1em;
+
+}
+
+.portfolio-item h3 {
+	font-size: 1.6em;
+	padding-bottom: .4em;
+}
+
+.portfolio-item p {
+	font-size: 1em;
+	padding-bottom: 2em;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* ---- Contact Section ---- */
+
+#contact h2 {
+	padding-top: 1.6em;
+	padding-bottom: 1.6em;
+}
+
+#contact p {
+	font-size: 1em;
+	padding-bottom: 1.6em;
+	width: 75%;
+	margin: 0 auto;
+}
+
+#contact .info {
+	padding-bottom: .8em;
+}
+
+#contact a {
+	color: white;
+	font-weight: bold;
+	padding: .4em;
+}
+
+#contact a:hover {
+	color: #AC5043;
+}
+
+#contact hr {
+	margin-top: 2.4em;
+	border-color: rgba(255,255,255,.25);
+}
+
+/* ---- Mobile Footer ---- */
+
+.main-footer {
+	padding-bottom: 2.4em;
+}
+
+.bottom-name {
+	font-size: 1.2em;
+	font-weight: bold;
+	float: left;
+}
+
+.to-top {
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.2em;
+	float: right;
+}
+
+.to-top:hover {
+	color: #AC5043;
+}
+
+.large-footer-nav {
+	display: none;
+}
+
+/* =========================
+Float Clearfix
+========================= */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+/* =========================
+Media Queries
+========================= */
+
+@media (min-width: 768px) {
+	.main-nav ul {
+		width: 50%;
+		margin: 0 auto;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.main-nav a {
+		color: white;
+		background-color: #16a085;
+	}
+
+	.intro img {
+		float: right;
+		width: 40%;
+		margin-right: 1.6em;
+		margin-left: 2.4em;
+		margin-bottom: 1.6em;
+
+	}
+
+	.intro p {
+		padding-left: .8em;
+		text-align: left;
+	}
+
+	.portfolio-container {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1em;
+	}
+
+	.portfolio-item {
+		width: calc(50% - 2em);
+		margin: 0 1em;
+	}
+
+	#skills p {
+		width: calc(60% - 2em);
+		float: left;
+		text-align: left;
+		padding-left: .8em;
+		margin-right: 1em;
+	}
+
+	#skills ul {
+		width: 40%;
+		float: right;
+		text-align: left;
+		margin-left: 1em;
+	}
+
+	.intro p,
+	#skills p,
+	#skills li,
+	#contact p {
+		font-size: 1.2em;
+	}
+
+	.to-top {
+		display: none;
+	}
+
+	.main-footer,
+	.large-footer-nav {
+		display: flex;
+	}
+
+	.large-footer-nav {
+		width: 33%;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.large-footer-nav a {
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.large-footer-nav a:hover {
+		color: #AC5043;
+	}
+
+	.bottom-name {
+		margin-right: auto;
+	}
+}
+
+@media (min-width: 1024px) {
+	.main-header {
+		flex-direction: row;
+		margin: auto;
+	}
+
+	#name {
+		margin-right: auto;
+	}
+
+	.main-nav ul {
+		width: 100%;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-top: 2em;
+		padding-right: 1.6em;
+	}
+
+	.main-nav li {
+		margin-left: .8em;
+		font-size: 1em;
+		align-items: flex-end;
+
+	}
+
+	.portfolio-container {
+		margin: 0 1em;
+	}
+
+	.portfolio-item {
+		width: calc(33% - 2em);
+	}
+
+	body {
+		background-color: #16a085;
+	}
+
+	#skills,
+	#portfolio {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	#skills {
+		margin-bottom: 2em;
+	}
+}
+
+
+
+
